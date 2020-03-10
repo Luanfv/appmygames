@@ -1,13 +1,10 @@
 import React from 'react'
 import {View, Text} from 'react-native'
+import HomePage from './screens/HomePage'
 
 export default () =>
 {
   return (
-    <View>
-      <Text>
-        Meus Games
-      </Text>
-    </View>
+    <HomePage />
   )
 }
