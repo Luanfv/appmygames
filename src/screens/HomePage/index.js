@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Container, Search, Input, InitSearch} from './styled'
-import {FlatList, Keyboard, View, Text} from 'react-native'
-import AsyncStorage from '@react-native-community/async-storage'  
+import {FlatList, Keyboard, View, Text, AsyncStorage} from 'react-native'
 import Icon from 'react-native-vector-icons/Octicons'
 import Game from './../../components/Game'
 
@@ -36,8 +35,8 @@ export default () =>
                 {name: 'The last of us 2', platform: ['Playstation'], category: ['action', 'adventure'], status: 3, favority: true},
             ]))*/
             const gamesStorage = JSON.parse(await AsyncStorage.getItem('@games'))
-            setGames(gamesStorage.length === 0 ? [] : gamesStorage)
-            setViewGames(gamesStorage.length === 0 ? [] : gamesStorage)
+            setGames(gamesStorage.length === 0 || !gamesStorage ? [] : gamesStorage)
+            setViewGames(gamesStorage.length === 0 || !gamesStorage ? [] : gamesStorage)
         }
 
         handleGames()
