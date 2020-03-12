@@ -1,10 +1,12 @@
 import React from 'react'
-import {View, Text} from 'react-native'
-import HomePage from './screens/HomePage'
+import { NavigationContainer } from '@react-navigation/native'
+import Routes from './Routes'
 
 export default () =>
 {
   return (
-    <HomePage />
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
   )
 }
