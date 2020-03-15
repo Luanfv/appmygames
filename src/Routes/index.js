@@ -1,6 +1,7 @@
 import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer'
-import Home from './screens/HomePage'
+import {HomeScreen} from './Stacks'
+
 
 export default () =>
 {
@@ -8,7 +9,7 @@ export default () =>
 
     return (
         <Drawer.Navigator initialRouteName="Home">
-            <Drawer.Screen name="Home" component={Home} />
+            <Drawer.Screen name="Home" component={HomeScreen} />
         </Drawer.Navigator>
     )
 }

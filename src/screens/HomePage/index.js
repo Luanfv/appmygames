@@ -6,7 +6,7 @@ import Game from './../../components/Game'
 
 Icon.loadFont()
 
-export default () =>
+export default ({navigation}) =>
 {
     const [games, setGames] = useState([])
     const [search, setSearch] = useState('')
